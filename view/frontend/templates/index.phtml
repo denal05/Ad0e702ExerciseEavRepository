@@ -16,7 +16,6 @@ $page = $productRendererViewModel->getPage();
 <?php else: ?>
     <?php
     $count = 1;
-    //$searchCriteriaBuilder->setCurrentPage(1);
     $searchCriteriaBuilder->setPageSize(10);
     $searchCriteriaBuilder->addFilter('type_id', \Magento\Catalog\Model\Product\Type::TYPE_SIMPLE, 'eq');
     $searchResult =  $productRepository->getList($searchCriteriaBuilder->create());
