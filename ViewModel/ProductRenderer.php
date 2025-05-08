@@ -14,10 +14,10 @@ class ProductRenderer implements ArgumentInterface
     private $request;
 
     /** @var ProductRepositoryInterface */
-    public $productRepository;
+    private $productRepository;
 
     /** @var SearchCriteriaBuilder */
-    public $searchCriteriaBuilder;
+    private $searchCriteriaBuilder;
 
     public function __construct(
         RequestInterface $request,
