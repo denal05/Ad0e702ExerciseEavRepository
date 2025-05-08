@@ -5,6 +5,7 @@
 $productRendererViewModel = $block->getData('productRendererViewModel');
 $productRepository = $productRendererViewModel->getProductRepository();
 $searchCriteriaBuilder = $productRendererViewModel->getSearchCriteriaBuilder();
+$page = $productRendererViewModel->getPage();
 ?>
 <h1><?= __("Welcome") ?></h1>
 <code><?= date("Y-m-d H:i:s") ?></code>
@@ -15,7 +16,7 @@ $searchCriteriaBuilder = $productRendererViewModel->getSearchCriteriaBuilder();
 <?php else: ?>
     <?php
     $count = 1;
-    $searchCriteriaBuilder->setCurrentPage(1);
+    //$searchCriteriaBuilder->setCurrentPage(1);
     $searchCriteriaBuilder->setPageSize(10);
     $searchCriteriaBuilder->addFilter('type_id', \Magento\Catalog\Model\Product\Type::TYPE_SIMPLE, 'eq');
     $searchResult =  $productRepository->getList($searchCriteriaBuilder->create());
@@ -24,5 +25,6 @@ $searchCriteriaBuilder = $productRendererViewModel->getSearchCriteriaBuilder();
     }
     ?>
     <p> repository searchResult->getTotalCount() = <?= $searchResult->getTotalCount() ?> products
-<?php endif; ?>
+    <p> current page: <?= $page ?>
+    <?php endif; ?>
 </p>

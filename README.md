@@ -32,3 +32,34 @@ you will see the following output in the 2columns-right layout's main window:
 
 repository searchResult->getTotalCount() = 1891 products
 ```
+
+If you add a page as follows, you will go to that page of the search results:
+
+https://ad0-e702.local/repository/product/?p=2
+
+```
+2025-05-08 12:21:15
+
+1 | 24-WB06
+
+2 | 24-WB03
+
+3 | 24-WB07
+
+4 | 24-WB04
+
+5 | 24-UG06
+
+6 | 24-UG07
+
+7 | 24-UG04
+
+8 | 24-UG02
+
+9 | 24-UG05
+
+10 | 24-UG01
+
+repository searchResult->getTotalCount() = 1891 products
+
+current page: 2
